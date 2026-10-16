@@ -1,8 +1,8 @@
 /**
  * Name: Sathvik Alla
- * Date: October 2, 2026
+ * Date: October 16, 2026
  * Course: IT-302-001
- * Assignment: Phase 2 Read MongoDB Data using Node.js Assignment
+ * Assignment: Phase 3 C.U.D. MongoDB Data using Node.js
  * Email: sa3242@njit.edu
  */
 
@@ -10,6 +10,7 @@ import app from "./server.js";
 import { MongoClient } from "mongodb";
 import dotenv from "dotenv";
 import StarWarsDAO from "./dao/starwarsDAO.js";
+import CommentsDAO from "./dao/commentsDAO.js";
 
 dotenv.config();
 
@@ -22,6 +23,7 @@ MongoClient.connect(process.env.STARWARS_DB_URI)
   })
   .then(async (client) => {
     await StarWarsDAO.injectDB(client);
+    await CommentsDAO.injectDB(client);
     app.listen(port, () => {
       console.log(`Server listening on port ${port}`);
     });

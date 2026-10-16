@@ -1,8 +1,9 @@
 /**
+/**
  * Name: Sathvik Alla
- * Date: October 2, 2026
+ * Date: October 16, 2026
  * Course: IT-302-001
- * Assignment: Phase 2 Read MongoDB Data using Node.js Assignment
+ * Assignment: Phase 3 C.U.D. MongoDB Data using Node.js
  * Email: sa3242@njit.edu
  */
 
