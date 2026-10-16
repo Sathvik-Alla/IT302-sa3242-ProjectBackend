@@ -1,0 +1,12 @@
+[{
+  "_id": {
+    "$oid": "6ad2b0a6f0eda9397a0e653e"
+  },
+  "starWarsId": "6aac6907f55292a490b09caa",
+  "userName": "Sathvik Alla",
+  "userId": "sa3242",
+  "text": "Tatooine is an iconic planet in the Star Wars universe. Its desert landscape, twin suns, and moisture farms make it an interesting setting for the story.",
+  "lastModified": {
+    "$date": "2026-10-16T23:17:58.972Z"
+  }
+}]
