@@ -14,9 +14,13 @@ const router = express.Router();
 
 router.route("/").get(StarWarsController.apiGetStarWars);
 router
+  .route("/id/:id")
+  .get(StarWarsController.apiGetStarWarsById);
+router
     .route("/comments")
     .post(CommentsController.apiPostComment)
     .put(CommentsController.apiUpdateComment)
     .delete(CommentsController.apiDeleteComment);
+      
 
 export default router;

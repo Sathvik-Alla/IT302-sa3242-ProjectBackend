@@ -39,4 +39,26 @@ export default class StarWarsController {
     };
     res.json(response);
   }
+
+  static async apiGetStarWarsById(req, res, next) {
+  try {
+    const id = req.params.id;
+
+    const record = await StarWarsDAO.getStarWarsById(id);
+
+    if (!record) {
+      return res.status(404).json({
+        error: "Star Wars record not found"
+      });
+    }
+
+    res.json(record);
+  } catch (e) {
+    console.error(`API error: ${e}`);
+
+    res.status(400).json({
+      error: "Invalid record ID"
+    });
+  }
+}
 }

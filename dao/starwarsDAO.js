@@ -6,6 +6,7 @@
  * Email: sa3242@njit.edu
  */
 
+import { ObjectId } from "mongodb";
 let starWars;
 
 export default class StarWarsDAO {
@@ -62,4 +63,14 @@ export default class StarWarsDAO {
       return { starWarsList: [], totalNumStarWars: 0 };
     }
   }
+  static async getStarWarsById(id) {
+  try {
+    return await starWars.findOne({
+      _id: new ObjectId(id)
+    });
+  } catch (e) {
+    console.error(`Unable to retrieve Star Wars record: ${e}`);
+    throw e;
+  }
+}
 }
